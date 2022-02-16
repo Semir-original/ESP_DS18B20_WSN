@@ -5,8 +5,8 @@
 #include <Ticker.h>
 #include <AsyncMqttClient.h>
 
-#define WIFI_SSID "Error0x01"
-#define WIFI_PASSWORD "Modem123456789huaweI"
+#define WIFI_SSID "WIFI_SSDI"
+#define WIFI_PASSWORD "WIFI_PASSWORD"
 
 // Raspberri Pi Mosquitto MQTT Broker
 #define MQTT_HOST IPAddress(192, 168, 8,111 ) 
@@ -112,7 +112,8 @@ void setup() {
   //mqttClient.setCredentials("REPlACE_WITH_YOUR_USER", "REPLACE_WITH_YOUR_PASSWORD");
   
   connectToWifi();
-delay(10000);
+delay(10000); 
+  // Do not remove the delay , It is necessary due to DHCP protocol
     sensors.requestTemperatures(); 
     temp = sensors.getTempCByIndex(0);
     // Temperature in Fahrenheit degrees
